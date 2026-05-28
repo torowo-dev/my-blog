@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="light">
+<html lang="ko" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Blog</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- 최초 페인트 전에 테마를 적용해 깜빡임을 방지한다. -->
+    <!-- 최초 페인트 전에 테마를 적용해 깜빡임을 방지한다. 기본은 다크(네온). -->
     <script>
       (function () {
         try {
-          var t = localStorage.getItem('theme');
-          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          var t = localStorage.getItem('theme') || 'dark';
           document.documentElement.setAttribute('data-theme', t);
         } catch (e) {}
       })();
@@ -18,7 +17,7 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container site-header__inner">
+      <div class="container container--wide site-header__inner">
         <a class="site-header__brand" href="index.html">← My Blog</a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="테마 전환"></button>
       </div>
@@ -31,8 +30,8 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© 2026 My Blog · 마크다운으로 작성</p>
+      <div class="container container--wide">
+        <p>© 2026 My Blog — built with markdown</p>
       </div>
     </footer>
 

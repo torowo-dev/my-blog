@@ -4,10 +4,6 @@
 
 const STORAGE_KEY = 'theme';
 
-function prefersDark() {
-  return window.matchMedia('(prefers-color-scheme: dark)').matches;
-}
-
 function getStored() {
   try {
     return localStorage.getItem(STORAGE_KEY);
@@ -25,16 +21,16 @@ function store(theme) {
 }
 
 export function getTheme() {
-  return document.documentElement.getAttribute('data-theme') || 'light';
+  return document.documentElement.getAttribute('data-theme') || 'dark';
 }
 
 function apply(theme) {
   document.documentElement.setAttribute('data-theme', theme);
 }
 
-// 저장된 선택이 있으면 그것을, 없으면 OS 설정을 따른다.
+// 네온 테마가 기본. 저장된 선택이 있으면 그것을 따른다.
 export function initTheme() {
-  const theme = getStored() || (prefersDark() ? 'dark' : 'light');
+  const theme = getStored() || 'dark';
   apply(theme);
   return theme;
 }
