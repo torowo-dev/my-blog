@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "js-event-listener",
+    "title": "JavaScript 이벤트 리스너 이해하기",
+    "date": "2026-05-29",
+    "summary": "버튼 클릭, 키 입력 등 사용자 인터랙션을 처리하는 addEventListener의 기본 사용법을 정리했습니다."
+  },
+  {
+    "slug": "css-flexbox",
+    "title": "CSS Flexbox로 레이아웃 잡기",
+    "date": "2026-05-28",
+    "summary": "display: flex 하나로 정렬과 배치 문제를 해결하는 Flexbox의 핵심 개념을 정리했습니다."
+  },
+  {
+    "slug": "today-i-learned",
+    "title": "오늘 배운 것",
+    "date": "2026-05-28",
+    "summary": "클로드 코드로 블로그를 만들며 알게 된 HTML·CSS·JavaScript의 역할을 정리했습니다."
+  },
+  {
+    "slug": "welcome",
+    "title": "블로그를 시작하며",
+    "date": "2026-05-28",
+    "summary": "마크다운으로 쓰는 이 블로그의 첫 글입니다."
+  },
+  {
+    "slug": "markdown-guide",
+    "title": "마크다운 문법 둘러보기",
+    "date": "2026-05-27",
+    "summary": "지원하는 마크다운 문법을 예제와 함께 살펴봅니다."
+  },
+  {
+    "slug": "dark-mode",
+    "title": "다크 모드는 어떻게 동작하나",
+    "date": "2026-05-26",
+    "summary": "테마 전환과 저장 방식, 색상 변수 구조를 설명합니다."
+  }
+]

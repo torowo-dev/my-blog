@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Blog</title>
+    <meta name="description" content="마크다운으로 쓰는 깔끔한 블로그" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- 최초 페인트 전에 테마를 적용해 깜빡임을 방지한다. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="index.html">My Blog</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="테마 전환"></button>
+      </div>
+    </header>
+
+    <main class="container site-main">
+      <div class="post-list" data-post-list>
+        <p class="loading">글을 불러오는 중…</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 My Blog · 마크다운으로 작성</p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
